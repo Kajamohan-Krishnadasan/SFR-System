@@ -1,0 +1,35 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-color: #282c34;
+  /* background-color: aliceblue; */
+  /* background-image: url('./Assets/Images/bg-image.jpg'); */
+  
+  /* background-image: url('./Assets/Images/bg.jpg'); */
+ 
+  height: 100vh;
+  width: 100vw;
+}
+.App {
+  text-align: center;
+  color: white;
+  vertical-align: middle;
+}
+
+/* Media Query for Mobile */
+@media screen and (min-width:320px) and (max-width:480px) {
+  body{
+    background-image:none;
+    width: 100%;
+  }
+}
+
+/* Media Query for Mobile */
+@media screen and (min-width: 769px) {
+  body{
+    background-image: url('./Assets/Images/bg1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
