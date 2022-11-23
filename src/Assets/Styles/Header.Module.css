@@ -1,0 +1,132 @@
+/* Media Query for Mobile */
+@media screen and (max-width: 768px) {
+  .main-nav-bar {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 5px 30px 5px;
+    font-size: 30px;
+    color: #fff;
+    background-color: #05256a;
+    width: 100%;
+  }
+
+  .header-left {
+    display: flex;
+    justify-content: center;
+  }
+
+  .heading {
+    color: rgb(210, 207, 207);
+    cursor: pointer;
+  }
+
+  .Public-page-button-home {
+    visibility: hidden;
+    display: none;
+    background-color: red;
+  }
+
+  .Public-page-button,
+  .Public-page-button-home {
+    color: #fff;
+    padding: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    /* background-color: rgb(149, 145, 145); */
+
+    /* text-shadow: 1px 1px 10px rgb(11, 75, 22); */
+  }
+
+  .Public-page-button:hover,
+  .Public-page-button-home:hover {
+    border-bottom: 5px solid rgb(69, 203, 39);
+  }
+
+  .Active {
+    background-color: rgb(110, 105, 105);
+    font-weight: 550;
+    border-radius: 10px;
+    cursor: default;
+  }
+
+  .Active:hover {
+    border: none;
+  }
+}
+
+/************************************************
+*************************************************
+*************************************************
+*************************************************
+*************************************************
+************************************************/
+
+/* Media Query for Laptop */
+@media screen and (min-width: 769px) {
+  .main-nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+    font-size: 30px;
+    color: #fff;
+    background-color: #05256a;
+    width: 100%;
+  }
+
+  .header-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .heading {
+    color: rgb(210, 207, 207);
+    cursor: pointer;
+
+    user-select: none;
+    text-shadow: 1px 1px 10px rgba(73, 19, 19, 0.759);
+  }
+
+  .header-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* background-color: rgb(149, 145, 145); */
+    align-items: center;
+  }
+
+  .Public-page-button,
+  .Public-page-button-home {
+    color: #fff;
+    padding: 10px 20px 10px 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 25px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .Public-page-button:hover,
+  .Public-page-button-home:hover {
+    border-bottom: 5px solid rgb(69, 203, 39);
+  }
+
+  .Active {
+    background-color: rgb(110, 105, 105);
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: default;
+  }
+
+  .Active:hover {
+    border: none;
+  }
+}

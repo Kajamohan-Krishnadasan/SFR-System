@@ -1,0 +1,133 @@
+.MyAccount-Page {
+  background: #ffffff;
+  color: black;
+  margin: 30px 20px;
+  min-height: 500px;
+  border-top: 5px solid #22269a;
+  box-shadow: 0px 2px 13px 7px rgba(0, 0, 0, 0.25),
+    0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.MyAccount-Page form {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+}
+
+.MyAccount-Page label {
+  font-size: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 5px 0px;
+}
+
+.MyAccount-Page input {
+  font-size: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 5px 0px;
+  border: 1px solid #22269a;
+  border-radius: 5px;
+}
+
+.MyAccount-Page input:focus {
+  outline: none;
+}
+
+.MyAccount-Page i {
+  margin-bottom: 5px;
+  font-size: 15px;
+  color: #80819d;
+}
+
+.custom-file {
+  width: 100%;
+  border: 1px solid #22269a;
+  display: flex;
+  height: 40px;
+  padding: 0;
+  justify-content: space-between;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.custom-file label {
+  /* border: none; */
+  margin: 0;
+  height: 40px;
+  text-indent: 10px;
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: rgb(51, 76, 70);
+}
+
+.custom-file i {
+  background-color: #dadae1;
+  display: flex;
+  margin: 0;
+  text-indent: 10px;
+  align-items: center;
+  font-size: 18px;
+  color: #000;
+  border-radius: 0px 5px 5px 0px;
+  width: 100px;
+}
+
+#avatar {
+  cursor: pointer;
+  /* background-color: indigo; */
+  display: none;
+}
+
+.display-upload-img {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 10px;
+}
+
+#upload-avatar {
+  margin: 10px;
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+  /* border: 1px ridge #22269a; */
+  box-shadow: 0px 0px 15px rgb(151, 145, 145), 0px 0px 18px rgb(116, 112, 112);
+}
+
+.form-footer {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  background: #eaeaea;
+  flex-direction: row-reverse;
+  border-radius: 0px 0px 10px 10px;
+}
+
+#update-button {
+  /* align-self: flex-end; */
+  background-color: #007bff;
+  color: #fff;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 27px;
+  padding: 10px;
+  justify-content: center;
+  align-self: center;
+  margin-right: 20px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 0px 15px rgba(65, 25, 33, 0.892);
+}
+
+#update-button:hover {
+  box-shadow: 0px 0px 10px rgb(11, 147, 113);
+  background-color: rgb(31, 126, 31);
+}

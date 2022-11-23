@@ -1,18 +1,13 @@
-import React, { useState } from "react";
-import './Footer.Module.css';
-const Footer = () => {
-    const [year, setYear] = useState(0);
-  const setFooter=()=>{
-    let CurrentYear = Date.now;
+import React from "react";
+import { setYear } from "../../Assets/js/Functions";
 
-    setYear(CurrentYear + 5);
-  }
-    
+import "./Footer.Module.css";
+const Footer = () => {
   return (
-    <div id="Footer" onLoad={setFooter}>
-        &copy;Copyright {year}
-      </div>
-  )
-}
+    <div className="Footer-All-Page" id="Footer">
+      <span>&copy; Copyright {setYear()} University of Jaffna.</span>
+    </div>
+  );
+};
 
 export default Footer;

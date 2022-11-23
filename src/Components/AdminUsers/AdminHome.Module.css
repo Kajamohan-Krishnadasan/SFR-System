@@ -1,0 +1,120 @@
+/* Media Query for Mobile */
+@media screen and (max-width: 768px) {
+  .welcome-title {
+    color: rgb(253, 253, 253);
+    font-weight: 550;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 25px;
+  }
+
+  .hr-line {
+    color: rgb(233, 234, 234);
+    width: 95%;
+    margin: 0px auto;
+  }
+  .details-in-home {
+    background-color: rgb(146, 153, 159);
+    margin-top: 10px;
+    /* width: 200px; */
+    padding: 10px;
+    display: flex;
+    font-size: 20px;
+  }
+
+  .details-in-home .icon {
+    margin: 10px;
+    background-color: white;
+    height: 60px;
+    width: 60px;
+    color: rgb(11, 68, 99);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px black, 1px 1px 5px black;
+  }
+
+  .values {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/************************************************
+*************************************************
+*************************************************
+*************************************************
+*************************************************
+************************************************/
+
+/* Media Query for Laptop */
+@media screen and (min-width: 769px) {
+  .welcome-title {
+    height: 40px;
+    line-height: 39px;
+    font-weight: 600;
+    font-size: 32px;
+    margin: 10px;
+  }
+
+  .hr-line {
+    border: 2px solid #e0d9d9;
+    width: 95%;
+    align-content: center;
+    margin-left: 2.5%;
+  }
+
+  .home-category {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .details-in-home {
+    width: 250px;
+    height: 100px;
+    background: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    color: #7b5b43;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .details-in-home .icon {
+    background-color: #ded6d6;
+    height: 60px;
+    width: 60px;
+    color: #942727;
+    display: flex;
+    margin: 20px 10px 20px 15px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+  }
+
+  .values {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-top: 10px;
+  }
+
+  .values-value,
+  .values-name {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-top: 10px;
+  }
+  
+}

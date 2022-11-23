@@ -1,0 +1,33 @@
+#Dashboard {
+  display: flex;
+  width: 100%;
+  align-content: stretch;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.Dashboard-buttons {
+  margin: 50px 80px 60px 150px ;
+  width: 380px;
+  height: 180px;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  color: #756b6b;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+}
+
+.Dashboard-buttons:hover {
+  box-shadow: 0px 0px 40px rgb(25, 21, 21), 0px 0px 10px rgb(25, 21, 21);
+  color: rgb(255, 255, 255);
+  background-color: rgb(15, 136, 15);;
+}
+
+.Dashboard-buttons:active {
+  box-shadow: 0px 0px 25px rgb(205, 94, 94);
+  /* color: rgb(194, 66, 66); */
+}
+
