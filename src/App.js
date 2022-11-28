@@ -15,9 +15,10 @@ function App() {
           <Route exact path="/" element={<Public />} />
           <Route path="/login" element={<Loginpage />} />
           <Route path="/sign-up" element={<Signinpage />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/home" element={<Home/>} />
           <Route path="/admin-login" element={<AdminLoginPage />} />
           <Route path="/admin" element={<AdminHome />} />
+        
         </Routes>
       </BrowserRouter>
     </div>

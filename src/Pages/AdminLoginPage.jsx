@@ -9,6 +9,7 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import { setYear, checkUniMail } from "../Assets/js/Functions";
 import { ErrorStyle } from "../Assets/js/Alerts";
+import { mainLogo } from "../Assets/Icons/index";
 
 const AdminLoginPage = () => {
   const [userMailValid, setUserMailValid] = useState(false);
@@ -110,12 +111,11 @@ const AdminLoginPage = () => {
     <div id="Login-Main">
       <nav className="main-nav-bar">
         <div className="header-left">
+           <img src={mainLogo} alt="" className="main-logo" onClick={PublicPage} />
           <div className="heading" onClick={PublicPage}>
             Sport Facilities Reservation System
           </div>
-          <button className="Public-page-button-home" onClick={PublicPage}>
-            Home
-          </button>
+          
         </div>
 
         <div className="header-right">

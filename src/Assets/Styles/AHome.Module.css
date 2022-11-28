@@ -13,7 +13,9 @@
     background-color: #04384a;
     /* background-color: red;/ */
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    /* justify-content: space-around; */
+
     align-items: center;
     width: 100%;
     height: 100px;
@@ -21,12 +23,25 @@
     padding: 10px 0px;
   }
 
+  .main-logo {
+    height: 40px;
+    /* width: 30px; */
+    margin: 0px;
+  }
+
   .Heading-1 {
     color: rgb(255, 255, 255);
     content: "kaja";
     font-size: 16px;
-    text-align: left;
-    margin-left: 20px;
+    /* text-align: left; */
+    /* margin-left: 20px; */
+    display: flex;
+    flex-direction: row;
+  }
+
+  .user-Image {
+    height: 20px;
+    width: 20px;
   }
 
   .header-main-submenu {
@@ -104,10 +119,10 @@
     width: 100%;
     height: 50px;
   }
-  
+
   .side-buttons {
     text-align: justify;
-
+    cursor: pointer;
     height: 100%;
     width: 100%;
     background-color: #40464bd0;
@@ -147,6 +162,8 @@
   .Home-Main-Area {
     background-color: rgb(9, 68, 97);
     min-height: 90vh;
+    max-height: 100vh;
+    overflow: scroll;
     width: 100%;
   }
 }
@@ -161,7 +178,11 @@
 /* Media Query for Laptop */
 @media screen and (min-width: 769px) {
   header {
-    background-color: #04384a;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #093645;
     /* background-color: red;/ */
     display: flex;
     justify-content: space-between;
@@ -170,6 +191,12 @@
     height: 100px;
     margin: 0;
     padding: 20px 0px;
+    /* align-items: center; */
+    /* justify-items: center; */
+  }
+  .main-logo {
+    height: 80px;
+    width: 80px;
   }
 
   .Heading-1 {
@@ -177,6 +204,8 @@
     font-size: 20px;
     text-align: left;
     margin-left: 20px;
+    display: flex;
+    align-items: center;
   }
 
   .header-main-submenu {
@@ -185,7 +214,14 @@
     height: 40px;
     margin-right: 15px;
   }
-
+  .overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.01);
+  }
   .Heading {
     color: rgb(255, 255, 255);
     font-size: 18px;
@@ -199,7 +235,7 @@
     align-items: center;
   }
 
-  .user-Image{
+  .user-Image {
     height: 40px;
     padding-right: 10px;
   }
@@ -213,6 +249,7 @@
     text-align: left;
     position: relative;
     color: #092c38;
+    z-index: 1;
     background-color: #ffffff;
   }
 
@@ -228,6 +265,7 @@
     border: 1px solid rgba(128, 128, 128, 0.393);
     border-top: 0.5px solid rgba(128, 128, 128, 0.393);
   }
+  
   .sub-item:hover {
     background-color: rgba(216, 205, 205, 0.686);
   }
@@ -238,28 +276,36 @@
   }
 
   .Dashboard-Area {
+    position: relative;
+    top: 100px;
     display: flex;
     height: 100%;
-    background-color: rgb(28, 86, 114);
+    margin-top: auto;
+    /* background-color: rgb(28, 86, 114); */
+    background-color: #04384a;
   }
 
   .side-nav-bar {
-    background-color: rgb(206, 218, 228);
+    position: fixed;
+    width: 220px;
+    /* background-color: rgb(206, 218, 228); */
     display: flex;
     flex-direction: column;
     /* width: 0px; */
     height: 100%;
     /* border: none; */
+    cursor: pointer;
   }
 
   .side-buttons {
     text-align: justify;
     font-family: "Times New Roman", Times, serif;
-
+    cursor: pointer;
     height: 50px;
     width: 220px;
     font-size: 25px;
-    background-color: #40464b;
+    /* background-color: #40464b; */
+    background-color: none;
     color: rgb(255, 255, 255);
     display: flex;
     align-items: center;
@@ -275,28 +321,38 @@
     background-color: #07396e;
     color: #ffffff;
   }
+
   .active:hover {
     background-color: #07396e;
     color: #ffffff;
+    cursor: default;
   }
 
   .-buttons {
-    cursor: default;
+    cursor: pointer;
     font-family: "Times New Roman", Times, serif;
     font-size: 25px;
     border: none;
   }
 
   .sidebar-icons {
-    /* background-color: #04384a; */
-    /* margin: 0px auto; */
     margin-left: 10px;
     margin-right: 15px;
   }
 
   .Home-Main-Area {
-    background: #8796A0;
+    position: relative;
+    /* left: 50px; */
+    left: 220px;
+
+    background: #8796a0;
+    
+    /* background-image: url('../Images/pexels-saifcom-7438729.jpg'); */
+    background-image: url("../Images/MicrosoftTeams-image\ \(1\).png");
+    background-size: cover;
     min-height: 90vh;
-    width: 100%;
+    max-height: 100vh;
+    overflow: scroll;
+    width: calc(100% - 220px);
   }
 }

@@ -67,10 +67,10 @@ const MyAccount = () => {
             <i>Leave this blank if you don’t want to change the password.</i>
           </div>
 
-          <div class="custom-file-in-user" onClick={openDirectory}>
+          <div className="custom-file-in-user" onClick={openDirectory}>
             <label
-              class="custom-file-label"
-              for="customFile"
+              className="custom-file-label"
+              htmlFor="customFile"
               onClick={openDirectory}
             >
               Choose file

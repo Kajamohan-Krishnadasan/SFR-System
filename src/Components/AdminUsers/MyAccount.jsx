@@ -29,15 +29,15 @@ const MyAccount = () => {
         <label htmlFor="lName">Last Name</label>
         <input type="text" name="lName" id="lName" />
 
-        <label htmlFor="pws">Password Name</label>
+        <label htmlFor="pws">Password</label>
         <input type="text" name="pws" id="pws" />
 
         <i>Leave this blank if you don’t want to change the password.</i>
 
-        <div class="custom-file" onClick={openDirectory}>
+        <div className="custom-file" onClick={openDirectory}>
           <label
-            class="custom-file-label"
-            for="customFile"
+            className="custom-file-label"
+            htmlFor="customFile"
             onClick={openDirectory}
           >
             Choose file

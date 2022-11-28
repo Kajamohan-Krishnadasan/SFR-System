@@ -15,6 +15,9 @@
 /* Media Query for Laptop */
 @media screen and (min-width: 769px) {
   .Footer-All-Page {
+    position: relative;
+    top:  100px;
+    /* bottom: 10px; */
     display: flex;
     width: 100%;
 
@@ -25,7 +28,5 @@
     font-size: 20px;
     font-weight: 500;
     background-color: #282c34;
-    position: relative;
-    bottom: 0;
   }
 }

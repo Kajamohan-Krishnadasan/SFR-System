@@ -1,0 +1,344 @@
+/* Media Query for Mobile */
+@media screen and (max-width: 768px) {
+    #Home-Main {
+      color: #000000;
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      /* border-radius: 10px; */
+      /* padding: 100px; */
+    }
+  
+    header {
+      background-color: #04384a;
+      /* background-color: red;/ */
+      display: flex;
+      flex-direction: column;
+      /* justify-content: space-around; */
+  
+      align-items: center;
+      width: 100%;
+      height: 100px;
+      margin: 0;
+      padding: 10px 0px;
+    }
+  
+    .main-logo {
+      height: 40px;
+      /* width: 30px; */
+      margin: 0px;
+    }
+  
+    .Heading-1 {
+      color: rgb(255, 255, 255);
+      content: "kaja";
+      font-size: 16px;
+      /* text-align: left; */
+      /* margin-left: 20px; */
+      display: flex;
+      flex-direction: row;
+    }
+  
+    .user-Image {
+      height: 20px;
+      width: 20px;
+    }
+  
+    .header-main-submenu {
+      display: flex;
+      flex-direction: column;
+      height: 18px;
+      margin-right: 15px;
+    }
+  
+    .Heading {
+      color: rgb(255, 255, 255);
+      font-size: 15px;
+      height: 18px;
+      cursor: pointer;
+    }
+  
+    .header-submenu {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  
+    .sub-menu {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      height: 80px;
+      text-align: left;
+      position: relative;
+      color: #092c38;
+    }
+  
+    .sub-item {
+      background-color: #ffffff;
+      align-self: flex-end;
+      color: #000000;
+      font-size: 15px;
+      height: 60px;
+      width: 130px;
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+      flex-direction: row;
+      gap: 10px;
+      border: 1px solid rgba(128, 128, 128, 0.393);
+      border-top: 0.5px solid rgba(128, 128, 128, 0.393);
+    }
+  
+    .sub-item:hover {
+      background-color: rgba(216, 205, 205, 0.686);
+    }
+  
+    .dropdown-icons {
+      color: white;
+      cursor: pointer;
+    }
+  
+    .Dashboard-Area {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      background-color: rgb(28, 86, 114);
+    }
+  
+    .Dashboard-Area .dropdown-icons {
+      display: none;
+    }
+  
+    .side-nav-bar {
+      background-color: rgb(206, 218, 228);
+      display: flex;
+      flex-direction: row;
+  
+      justify-content: space-around;
+      width: 100%;
+      height: 50px;
+    }
+  
+    .side-buttons {
+      text-align: justify;
+  
+      height: 100%;
+      width: 100%;
+      background-color: #40464bd0;
+      color: rgb(255, 255, 255);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 100;
+      /* align-self: stretch; */
+      /* display: none; */
+    }
+  
+    .side-buttons:hover {
+      background-color: rgb(185, 185, 196);
+      color: #092c38;
+    }
+  
+    .side-buttons:active,
+    .active {
+      background-color: #07396e;
+      color: #ffffff;
+    }
+    .active:hover {
+      background-color: #07396e;
+      color: #ffffff;
+    }
+  
+    .-buttons {
+      display: none;
+    }
+  
+    .sidebar-icons {
+      /* background-color: #fff; */
+      display: none;
+    }
+  
+    .Home-Main-Area {
+      background-color: rgb(9, 68, 97);
+      min-height: 90vh;
+      max-height: 100vh;
+      overflow: scroll;
+      width: 100%;
+    }
+  }
+  
+  /************************************************
+  *************************************************
+  *************************************************
+  *************************************************
+  *************************************************
+  ************************************************/
+  
+  /* Media Query for Laptop */
+  @media screen and (min-width: 769px) {
+    header {
+      background-color: #093645;
+      /* background-color: red;/ */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 100px;
+      margin: 0;
+      padding: 20px 0px;
+      /* align-items: center; */
+      /* justify-items: center; */
+    }
+    .main-logo {
+      height: 80px;
+      width: 80px;
+    }
+  
+    .Heading-1 {
+      color: rgb(255, 255, 255);
+      font-size: 20px;
+      text-align: left;
+      margin-left: 20px;
+      display: flex;
+      align-items: center;
+    }
+  
+    .header-main-submenu {
+      display: flex;
+      flex-direction: column;
+      height: 40px;
+      margin-right: 15px;
+    }
+    .overlay {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.01);
+    }
+    .Heading {
+      color: rgb(255, 255, 255);
+      font-size: 18px;
+      height: 18px;
+      cursor: pointer;
+    }
+  
+    .header-submenu {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  
+    .user-Image {
+      height: 40px;
+      padding-right: 10px;
+    }
+  
+    .sub-menu {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      font-size: 18px;
+      height: 100px;
+      text-align: left;
+      position: relative;
+      color: #092c38;
+      z-index: 1;
+      background-color: #ffffff;
+    }
+  
+    .sub-item {
+      color: #000000;
+      font-size: 18px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      padding-left: 20px;
+      flex-direction: row;
+      gap: 10px;
+      border: 1px solid rgba(128, 128, 128, 0.393);
+      border-top: 0.5px solid rgba(128, 128, 128, 0.393);
+    }
+    .sub-item:hover {
+      background-color: rgba(216, 205, 205, 0.686);
+    }
+  
+    .dropdown-icons {
+      color: white;
+      cursor: pointer;
+    }
+  
+    .Dashboard-Area {
+      display: flex;
+      height: 100%;
+      /* background-color: rgb(28, 86, 114); */
+      background-color: #04384a;
+    }
+  
+    .side-nav-bar {
+      /* background-color: rgb(206, 218, 228); */
+      display: flex;
+      flex-direction: column;
+      /* width: 0px; */
+      height: 100%;
+      /* border: none; */
+    }
+  
+    .side-buttons {
+      text-align: justify;
+      font-family: "Times New Roman", Times, serif;
+  
+      height: 50px;
+      width: 220px;
+      font-size: 25px;
+      /* background-color: #40464b; */
+      background-color: none;
+      color: rgb(255, 255, 255);
+      display: flex;
+      align-items: center;
+    }
+  
+    .side-buttons:hover {
+      background-color: rgb(185, 185, 196);
+      color: #092c38;
+    }
+  
+    .side-buttons:active,
+    .active {
+      background-color: #07396e;
+      color: #ffffff;
+    }
+    
+    .active:hover {
+      background-color: #07396e;
+      color: #ffffff;
+    }
+  
+    .-buttons {
+      cursor: default;
+      font-family: "Times New Roman", Times, serif;
+      font-size: 25px;
+      border: none;
+    }
+  
+    .sidebar-icons {
+      /* background-color: #04384a; */
+      /* margin: 0px auto; */
+      margin-left: 10px;
+      margin-right: 15px;
+    }
+  
+    .Home-Main-Area {
+      background: #8796a0;
+      /* background-image: url('../Images/pexels-saifcom-7438729.jpg'); */
+      background-image: url("../Images/MicrosoftTeams-image\ \(1\).png");
+      background-size: cover;
+      min-height: 90vh;
+      max-height: 100vh;
+      overflow: scroll;
+      width: 100%;
+    }
+  }
+  

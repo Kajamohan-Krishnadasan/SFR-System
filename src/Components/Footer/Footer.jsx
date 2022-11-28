@@ -1,7 +1,7 @@
 import React from "react";
 import { setYear } from "../../Assets/js/Functions";
-
 import "./Footer.Module.css";
+
 const Footer = () => {
   return (
     <div className="Footer-All-Page" id="Footer">

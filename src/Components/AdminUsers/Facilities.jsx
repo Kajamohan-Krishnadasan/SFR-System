@@ -33,7 +33,6 @@ const Facilities = () => {
       <div>
         <select className="Action-Selection">
           <option defaultValue={true} value="action">
-            {" "}
             Action
           </option>
           <option value="view"> View</option>
@@ -45,10 +44,10 @@ const Facilities = () => {
   };
 
   let No = 0;
-  let len = data.length;
-  const nextButton = React.useRef();
-  const nextBtn = document.getElementsByClassName("next-button");
+  // let len = data.length;
 
+  const nextButton = React.useRef();
+  // const nextBtn = document.getElementsByClassName("next-button");
 
   return (
     <div className="Categories-Page">

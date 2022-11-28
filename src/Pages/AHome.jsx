@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import "../Assets/Styles/AHome.Module.css";
 import Footer from "../Components/Footer/Footer";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import {
   AdminHome,
   Dashboard,
@@ -26,18 +26,20 @@ import {
   Star,
 } from "@mui/icons-material";
 
-import { userImage } from "../Assets/Icons/index";
-
-// const referenceSet = createContext();
-//  [refSet[3], refSet[4], refSet[5], refSet[6]];
+import { userImage, mainLogo } from "../Assets/Icons/index";
 
 const AHome = () => {
   const navigate = useNavigate();
   const name = JSON.parse(sessionStorage.getItem("token-info")).mail;
+
+  const { state } = useLocation();
+
   const [isVisiable, setIsVisiable] = useState(false);
- 
+
   const refSet = useRef([]);
+
   const displayRef = useRef();
+  const subMenuRef = useRef();
 
   const logout = (e) => {
     e.preventDefault();
@@ -45,9 +47,7 @@ const AHome = () => {
     navigate("/");
   };
 
-  const allSideButtonsClass = Array.from(
-    document.getElementsByClassName("side-buttons")
-  );
+  const allSideButtonsClass = document.getElementsByClassName("side-buttons");
 
   const setActive = (arr, num) => {
     for (let i = 0; i < arr.length; i++) {
@@ -58,7 +58,7 @@ const AHome = () => {
       }
     }
   };
-  const [displayContent, setDisplayContent] = useState(<Dashboard />);
+  const [displayContent, setDisplayContent] = useState(<AdminHome />);
 
   const setClassName = {
     normal: "side-buttons",
@@ -73,16 +73,11 @@ const AHome = () => {
   };
 
   const DashboardPage = (e) => {
-    
     setActive(allSideButtonsClass, 1);
-    setDisplayContent(<Dashboard  ref={{
-      ref1: refSet[3],
-      ref2: refSet[4],
-      ref3: refSet[5],
-      ref4: refSet[6],
-
-    }}/>);
+    setDisplayContent(<Dashboard  />);
+    
   };
+
   const CategoriesPage = (e) => {
     setActive(allSideButtonsClass, 2);
     setDisplayContent(<CategoryPage />);
@@ -115,10 +110,30 @@ const AHome = () => {
     setIsVisiable(!isVisiable);
   };
 
+  const handleDashboardChange = () => {
+    console.log(state.changeTab);
+    let newValue = state.changeTab;
+
+    if (newValue === 3) {
+      setActive(allSideButtonsClass, 3);
+      setDisplayContent(<Facilities />);
+    } else if (newValue === 4) {
+      setActive(allSideButtonsClass, 4);
+      setDisplayContent(<Bookings />);
+    } else if (newValue === 5) {
+      setActive(allSideButtonsClass, 5);
+      setDisplayContent(<ClientsDetails />);
+    } else if (newValue === 6) {
+      setActive(allSideButtonsClass, 6);
+      setDisplayContent(<AdminDetails />);
+    }
+  };
+
   return (
     <div id="Home-Main">
       <header>
         <div className="Heading-1">
+          <img src={mainLogo} alt="" className="main-logo" />
           Sport Facilities Reservation System - University of Jaffna, Kilinochi
           Premises
         </div>
@@ -130,7 +145,7 @@ const AHome = () => {
             <ArrowDropDown fontSize="large" className="dropdown-icons" />
           </div>
           {isVisiable ? (
-            <div className="sub-menu">
+            <div className="sub-menu" ref={subMenuRef}>
               <div className="sub-item" onClick={MyAccountPage}>
                 <Settings /> My Account
               </div>
@@ -148,7 +163,7 @@ const AHome = () => {
       <div className="Dashboard-Area">
         <div className="side-nav-bar">
           <div
-            className="side-buttons active"
+            className={setClassName.active}
             ref={refSet.current[0]}
             onClick={HomePage}
           >
@@ -157,7 +172,7 @@ const AHome = () => {
           </div>
 
           <div
-            className="side-buttons"
+            className={setClassName.normal}
             ref={refSet.current[1]}
             onClick={DashboardPage}
           >
@@ -166,7 +181,7 @@ const AHome = () => {
           </div>
 
           <div
-            className="side-buttons"
+            className={setClassName.normal}
             ref={refSet.current[2]}
             onClick={CategoriesPage}
           >
@@ -175,7 +190,7 @@ const AHome = () => {
           </div>
 
           <div
-            className="side-buttons"
+            className={setClassName.normal}
             ref={refSet.current[3]}
             onClick={FacilitiesPage}
           >
@@ -184,7 +199,7 @@ const AHome = () => {
           </div>
 
           <div
-            className="side-buttons"
+            className={setClassName.normal}
             ref={refSet.current[4]}
             onClick={BookingsPage}
           >
@@ -193,7 +208,7 @@ const AHome = () => {
           </div>
 
           <div
-            className="side-buttons"
+            className={setClassName.normal}
             ref={refSet.current[5]}
             onClick={ClientsPage}
           >
@@ -202,7 +217,7 @@ const AHome = () => {
           </div>
 
           <div
-            className="side-buttons"
+            className={setClassName.normal}
             ref={refSet.current[6]}
             onClick={AdministratorsPage}
           >
@@ -211,7 +226,7 @@ const AHome = () => {
           </div>
 
           <div
-            className="side-buttons"
+            className={setClassName.normal}
             ref={refSet.current[7]}
             onClick={MyAccountPage}
           >
@@ -219,7 +234,7 @@ const AHome = () => {
             <div className="-buttons">My Account</div>
           </div>
 
-          <div className="side-buttons" onClick={logout}>
+          <div className={setClassName.normal} onClick={logout}>
             <Logout fontSize="large" className="sidebar-icons" />
             <div className="-buttons">Logout</div>
           </div>
@@ -234,6 +249,5 @@ const AHome = () => {
     </div>
   );
 };
-
 
 export default AHome;

@@ -34,7 +34,6 @@ const CategoriesPage = () => {
       <div>
         <select className="Action-Selection">
           <option defaultValue={true} value="action">
-            {" "}
             Action
           </option>
           <option value="view"> View</option>
@@ -80,7 +79,7 @@ const CategoriesPage = () => {
           {data.map((val, key) => {
             if (No < 10) {
               return (
-                <tr key={key}>
+                <tr key={key} >
                   <td>{++No}</td>
                   <td>{val.DateCreated}</td>
                   <td>{val.Category}</td>

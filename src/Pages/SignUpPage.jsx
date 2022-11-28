@@ -13,6 +13,8 @@ import {
 } from "../Assets/js/Functions";
 
 import Footer from "../Components/Footer/Footer";
+import { mainLogo } from "../Assets/Icons/index";
+
 
 const Loginpage = () => {
   const [userNameValid, setUserNameValid] = useState(false);
@@ -132,12 +134,12 @@ const Loginpage = () => {
     <div id="Login-Main">
       <nav className="main-nav-bar">
         <div className="header-left">
+          <img src={mainLogo} alt="" className="main-logo" onClick={PublicPage}/>
           <div className="heading" onClick={PublicPage}>
-            Sport Facilities Reservation System
+          
+          Sport Facilities Reservation System
           </div>
-          <button className="Public-page-button-home" onClick={PublicPage}>
-            Home
-          </button>
+          
         </div>
 
         <div className="header-right">

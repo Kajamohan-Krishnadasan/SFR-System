@@ -15,9 +15,13 @@
     justify-content: center;
   }
 
+
+
   .heading {
     color: rgb(210, 207, 207);
     cursor: pointer;
+    display: flex;
+    align-items: center;
   }
 
   .Public-page-button-home {

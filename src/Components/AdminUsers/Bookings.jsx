@@ -1,8 +1,7 @@
-
-import { Search } from "@mui/icons-material";
+import { RemoveRedEye, Search } from "@mui/icons-material";
 import React from "react";
 import "../../Assets/Styles/AdminUserStyles/AdminCategoriesPage.Module.css";
-import data from '../Samples/Bookings';
+import data from "../Samples/Bookings";
 
 const Bookings = () => {
   const StatusStyle = {
@@ -12,13 +11,22 @@ const Bookings = () => {
     Inactive: {
       backgroundColor: "#fa0000",
     },
+    Pending:{
+      backgroundColor: "#595c5e",
+    }
   };
 
   const specialStatus = (e) => {
-    if (e === "Confirmed") {
+    if (e === "Confirmed") { //Confirmed
       return (
         <div className="Status-Text" style={StatusStyle.Active}>
           Confirmed
+        </div>
+      );
+    }else if(e === "Pending"){ //Pending
+      return (
+        <div className="Status-Text" style={StatusStyle.Pending}>
+          Pending
         </div>
       );
     } else {
@@ -30,26 +38,11 @@ const Bookings = () => {
     }
   };
 
-  const actionButton = () => {
-    return (
-      <div>
-        <select className="Action-Selection">
-          <option defaultValue={true} value="action"> Action</option>
-          <option value="view"> View</option>
-          <option value="edit">  Edit</option>
-          <option value="delete"> Delete</option>
-        </select>
-      </div>
-    );
-  };
-
-  
 
   let No = 0;
-  let len = data.length;
+  // let len = data.length;
   const nextButton = React.useRef();
-  const nextBtn = document.getElementsByClassName("next-button");
-
+  // const nextBtn = document.getElementsByClassName("next-button");
 
   return (
     <div className="Categories-Page">
@@ -78,16 +71,21 @@ const Bookings = () => {
         <tbody>
           {data.map((val, key) => {
             if (No < 10) {
-            return (
-              <tr key={key}>
-                <td>{++No}</td>
-                <td>{val.DateBooked}</td>
-                <td>{val.ID}</td>
-                <td>{val.Client}</td>
-                <td>{specialStatus(val.Status)}</td>
-                <td className="Action">{actionButton()}</td>
-              </tr>
-            );}
+              return (
+                <tr key={key}>
+                  <td>{++No}</td>
+                  <td>{val.DateBooked}</td>
+                  <td>{val.ID}</td>
+                  <td>{val.Client}</td>
+                  <td>{specialStatus(val.Status)}</td>
+                  <td >
+                    <span className="view-action">
+                      <RemoveRedEye className="Eye"/> View
+                    </span>
+                  </td>
+                </tr>
+              );
+            }
           })}
         </tbody>
       </table>
