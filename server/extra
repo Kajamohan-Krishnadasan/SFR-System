@@ -1,0 +1,23 @@
+// const uploadHandler = upload.single("image");
+
+// app.post("/upload", (req, res) => {
+//   uploadHandler(req, res, function (err) {
+//     if (err instanceof multer.MulterError) {
+//       if (err.code == "LIMIT_FILE_SIZE") {
+//         res.send({
+//           message: "Maximum file size is 3MB",
+//         });
+//       }
+//       return;
+//     }
+//     if (req.file == null || req.file == undefined) {
+//       res.send({
+//         message: "No file!",
+//       });
+//     } else {
+//       res.send({
+//         success: "Uploaded to the server",
+//       });
+//     }
+//   });
+// });

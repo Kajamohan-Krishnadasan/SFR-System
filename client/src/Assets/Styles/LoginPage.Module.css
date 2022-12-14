@@ -1,0 +1,132 @@
+/* Media Query for Mobile */
+@media screen and (max-width: 768px) {
+  .Main-Area {
+    width: 100%;
+    height: 100%;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-self: center; */
+    background-color: #57afa6;
+    padding: 10px;
+    /* border-radius: 10px; */
+  }
+
+  .main-headding {
+    color: #05342f;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 50px;
+    /* background-color: red; */
+    margin-bottom: 15px;
+    text-shadow: 5px 5px 15px #010e0ca8;
+  }
+
+  .login-button {
+    background-color: rgb(5, 109, 109);
+    height: 50px;
+    width: 150px;
+    color: rgb(255, 253, 253);
+    font-size: 25px;
+    border-radius: 5px;
+    border: 3px solid white;
+    margin: 15px auto;
+  }
+
+  .login-button:hover {
+    box-shadow: 0px 0px 15px black, 0px 0px 15px black;
+  }
+  .extra {
+    color: black;
+  }
+  .href-link {
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+/************************************************
+*************************************************
+*************************************************
+*************************************************
+*************************************************
+************************************************/
+
+/* Media Query for Laptop */
+@media screen and (min-width: 769px) {
+ 
+  *{
+    overflow: visible;
+  }
+  #Login-Main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .Main-Area {
+    /* width: 100%; */
+    /* margin: 20px; */
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 100%;
+    width: 100%;
+    /* height: 900px; */
+  }
+
+  .main-headding {
+    color: #05342f;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 50px;
+    /* background-color: red; */
+    margin-bottom: 15px;
+    text-shadow: 5px 5px 15px #010e0ca8;
+  }
+
+  .login-button {
+    outline: none;
+    background-color: rgb(5, 109, 109);
+    height: 80px;
+    width: 150px;
+    color: rgb(255, 253, 253);
+    font-size: 25px;
+    border-radius: 5px;
+    border: 3px solid white;
+    margin: 15px auto;
+    cursor: pointer;
+  }
+
+  .login-button[attr = 'disabled']{
+    background-color: aliceblue;
+  }
+
+  .login-button:hover {
+    box-shadow: 0px 0px 15px black, 0px 0px 15px black;
+  }
+
+  .form {
+    width: 500px;
+    height: 400px;
+    background-color: #ffffff97;
+    border-radius: 10px;
+    margin: 20px auto;
+    box-shadow: 0px 0px 20px rgb(98, 137, 187);
+    padding: 40px;
+    align-self: center;
+ 
+  }
+  .extra {
+    color: black;
+    font-size: 17px;
+  }
+  .href-link {
+    color: rgb(12, 12, 179);
+    cursor: pointer;
+  }
+  .href-link:hover {
+    text-decoration: underline;
+  }
+
+}
